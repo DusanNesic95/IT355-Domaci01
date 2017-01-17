@@ -18,4 +18,24 @@
    	</property>
    	<property name="defaultEncoding" value="UTF-8"></property>
    </bean>
+   
+   <!-- Proizvoljni binovi -->
+   <bean id="sobaDao" class="net.sytes.codeline.domaci03.SobaDaoImpl"></bean>
+   <bean id="logAspect" class="net.sytes.codeline.domaci03.InterceptorLog"></bean>
+   
+   <!-- Aspektno orijentisano programiranje -->
+   <bean id="logPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+   	<property name="advice" ref="logAspect" />
+	<property name="mappedName">
+  	<value>*</value>
+	</property>
+   </bean>
+   <bean id="testServiceProxy" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	<property name="beanNames" value="studentDao" />
+	<property name="interceptorNames">
+		<list>
+			<value>logPointcutAdvisor</value>
+		</list>
+	</property>
+   </bean>
 </beans>

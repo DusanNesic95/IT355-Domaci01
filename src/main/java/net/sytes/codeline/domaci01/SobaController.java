@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import net.sytes.codeline.domaci02.Soba;
+import net.sytes.codeline.domaci03.SobaDao;
 
 @Controller
 @RequestMapping("/soba")
@@ -18,6 +19,9 @@ public class SobaController {
 	@SuppressWarnings("unused")
 	@Autowired
 	private MessageSource messageSource;
+	
+	@Autowired
+	private SobaDao sobaDao;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView showForm() {
@@ -32,6 +36,7 @@ public class SobaController {
 		model.addAttribute("tv", soba.isTv());
 		model.addAttribute("klima", soba.isKlima());
 		model.addAttribute("cenaPoDanu", soba.getCenaPoDanu());
+		sobaDao.addSoba();
 		
 		return "prikaziSobu";
 	}
