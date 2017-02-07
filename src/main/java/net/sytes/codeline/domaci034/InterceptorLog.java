@@ -1,4 +1,4 @@
-package net.sytes.codeline.domaci03;
+package net.sytes.codeline.domaci034;
 
 import java.lang.reflect.Method;
 

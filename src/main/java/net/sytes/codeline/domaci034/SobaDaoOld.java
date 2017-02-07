@@ -1,6 +1,6 @@
-package net.sytes.codeline.domaci03;
+package net.sytes.codeline.domaci034;
 
-public interface SobaDao {
+public interface SobaDaoOld {
 
 	public void addSoba();
 	public void addSobaBrojKreveta(int brojKreveta);

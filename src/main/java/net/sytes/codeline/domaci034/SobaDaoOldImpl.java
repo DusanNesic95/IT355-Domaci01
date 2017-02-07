@@ -1,6 +1,6 @@
-package net.sytes.codeline.domaci03;
+package net.sytes.codeline.domaci034;
 
-public class SobaDaoImpl implements SobaDao {
+public class SobaDaoOldImpl implements SobaDaoOld {
 
 	public void addSoba() {
 		System.out.println("Soba je dodata!");

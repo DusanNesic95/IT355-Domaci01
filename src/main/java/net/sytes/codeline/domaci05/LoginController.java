@@ -1,4 +1,4 @@
-package net.sytes.codeline.domaci04;
+package net.sytes.codeline.domaci05;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import net.sytes.codeline.domaci02.Soba;
+import net.sytes.codeline.domaci02.SobaOld;
 
 @Controller
 @RequestMapping("/login")
@@ -30,7 +30,7 @@ public class LoginController {
 	
 	@RequestMapping(value = "/soba**", method = RequestMethod.GET)
 	public ModelAndView showSoba() {
-		return new ModelAndView("dodajSobu", "command", new Soba());
+		return new ModelAndView("dodajSobu", "command", new SobaOld());
 	}
 	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)

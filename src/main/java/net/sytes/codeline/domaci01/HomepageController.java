@@ -15,7 +15,7 @@ public class HomepageController {
 	public String showHomepage(ModelMap model) {
 		model.addAttribute("indeks", "2325");
 		
-		return "homepage";
+		return "login";
 	}
 	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
